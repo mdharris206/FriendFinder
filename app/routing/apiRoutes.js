@@ -10,9 +10,6 @@ module.exports = function(app) {
 
 
   app.post("/api/friends", function(req, res) {
-    // Note the code here. Our "server" will respond to requests and let users know if they have a table or not.
-    // It will do this by sending out the value "true" have a table
-    // req.body is available since we're using the body parsing middleware
     console.log(req.body)
     /*
       Take current user scores array
@@ -48,15 +45,5 @@ module.exports = function(app) {
 
   });
 
-  // ---------------------------------------------------------------------------
-  // I added this below code so you could clear out the table while working with the functionality.
-  // Don"t worry about it!
-
-  // app.post("/api/clear", function(req, res) {
-  //   // Empty out the arrays of data
-  //   tableData.length = 0;
-  //   waitListData.length = 0;
-
-  //   res.json({ ok: true });
-  // });
+ 
 };
