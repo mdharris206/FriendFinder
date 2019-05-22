@@ -26,9 +26,11 @@ module.exports = function(app) {
     let scores = req.body.scores;
     let minDiff = 40;
     let match;
+    
     for(let i =0; i < friendsData.length; i++ ){
         console.log(friendsData[i].scores);
         let arraySum = 0; 
+
       for(let j = 0; j < friendsData[i].scores.length; j++ ){
 
         arraySum += friendsData[i].scores[j];
@@ -42,7 +44,7 @@ module.exports = function(app) {
       };
     };
 
-    res.send(match.name + ''+match.photo);
+    res.send(match.name +" "+match.photo);
 
   });
 
